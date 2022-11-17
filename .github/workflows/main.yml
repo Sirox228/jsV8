@@ -22,7 +22,7 @@ jobs:
           sudo apt install dos2unix -y
           sudo apt install python -y
           git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-          export PATH="$PATH:$(pwd)"
+          export PATH="$PATH:/home/runner/work/jsV8/jsV8/depot_tools"
           sudo chmod -R 777 *
           dos2unix build.sh
           cd depot_tools

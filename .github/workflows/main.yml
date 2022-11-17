@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup
         run: |
+          pwd
           sudo apt install make -y
           sudo apt install cmake -y
           sudo apt install automake -y
@@ -22,7 +23,6 @@ jobs:
           sudo apt install python -y
           git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
           export PATH="$PATH:$(pwd)"
-          pwd
           sudo chmod -R 777 *
           dos2unix build.sh
           cd depot_tools

@@ -13,6 +13,8 @@ cd depot_tools/v8
 
 # ./gn gen out/android_arm64.release
 
+export PATH="$PATH:/home/runner/work/jsV8/jsV8/depot_tools"
+
 case "$1" in
     armv7-a)
         python tools/dev/gm.py android_arm.release

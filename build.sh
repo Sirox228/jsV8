@@ -6,7 +6,11 @@ PWD=$(pwd)
 
 # export PATH="$PATH:$PWD/depot_tools/"
 
-alias gn=$PWD/depot_tools/gn
+# alias gn=$PWD/depot_tools/gn
+
+rm v8/tools/dev/gm.py
+
+cp gm-modded.py v8/tools/dev/gm.py
 
 case "$1" in
     armv7-a)

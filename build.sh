@@ -6,9 +6,7 @@ PWD=$(pwd)
 
 # alias gn=$PWD/depot_tools/gn
 
-rm v8/tools/dev/gm.py
-
-cp gm-modded.py v8/tools/dev/gm.py
+cp depot_tools/gn /usr/bin/gn
 
 cd v8/tools/dev
 
@@ -24,6 +22,3 @@ case "$1" in
         exit 1
         ;;
 esac
-
-cd ../../
-ls

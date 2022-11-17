@@ -2,6 +2,10 @@ echo "compiling for architecture: $1"
 
 cd v8/tools/dev
 
+PWD=$(pwd)
+
+export PATH="$PATH:$PWD/depot_tools"
+
 case "$1" in
     armv7-a)
         python gm.py android_arm.release

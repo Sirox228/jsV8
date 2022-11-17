@@ -8,8 +8,8 @@ cd v8
 
 # stupid way to fix can't find gn
 # cp -r depot_tools/* v8
-rm tools/dev/gm.py
-cp ../gm-modded.py tools/dev/gm.py
+#rm tools/dev/gm.py
+#cp ../gm-modded.py tools/dev/gm.py
 
 # ./gn gen out/android_arm64.release
 

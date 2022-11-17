@@ -6,7 +6,10 @@ PWD=$(pwd)
 
 # alias gn=$PWD/depot_tools/gn
 
-cp depot_tools/gn /usr/bin/gn
+# stupid way to fix can't find gn
+cd depot_tools
+cp $(find . -name "*") /usr/bin
+cd ../
 
 cd v8/tools/dev
 

@@ -13,6 +13,8 @@ cp gm-modded.py v8/tools/dev/gm.py
 
 cd v8/tools/dev
 
+./gn gen out/android_arm64.release
+
 case "$1" in
     armv7-a)
         python gm.py android_arm.release

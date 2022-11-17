@@ -527,7 +527,7 @@ class ArgumentParser(object):
     return self.configs
 
 def Main(argv):
-  _Call("alias gn=$(pwd)/depot_tools/gn", silent=True);
+  _Call("alias gn=$(pwd)/../../../depot_tools/gn", silent=True);
   parser = ArgumentParser()
   configs = parser.ParseArguments(argv[1:])
   return_code = 0

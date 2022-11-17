@@ -28,7 +28,6 @@ jobs:
           fetch v8
           cd v8
           gclient sync
-          # python gsutil.py config
           ./build/install-build-deps.sh
       - name: Build
         run: ./build.sh ${{matrix.arch}}

@@ -1,4 +1,3 @@
-# just a simple workflow that clones repo with library and runs build.sh
 name: Build
 on: [workflow_dispatch]
 jobs:
@@ -29,7 +28,7 @@ jobs:
           fetch v8
           cd v8
           gclient sync
-          python gsutil.py config
+          # python gsutil.py config
           ./build/install-build-deps.sh
       - name: Build
         run: ./build.sh ${{matrix.arch}}

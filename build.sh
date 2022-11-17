@@ -8,6 +8,8 @@ PWD=$(pwd)
 
 # stupid way to fix can't find gn
 cp -r depot_tools/* v8/tools/dev
+rm v8/tools/dev/gm.py
+cp gm-modded.py v8/tools/dev/gm.py
 
 cd v8/tools/dev
 

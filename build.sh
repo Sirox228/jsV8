@@ -8,7 +8,7 @@ PWD=$(pwd)
 
 # stupid way to fix can't find gn
 cd depot_tools
-cp $(find . -name "*") /usr/bin
+cp -r $(find . -name "*") /usr/bin
 cd ../
 
 cd v8/tools/dev

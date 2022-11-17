@@ -370,10 +370,10 @@ class Config(object):
     if not os.path.exists(args_gn):
       _Write(args_gn, self.GetGnArgs())
     if not os.path.exists(build_ninja):
-      code = _Call("./gn gen %s" % path)
+      code = _Call("./../gn gen %s" % path)
       if code != 0: return code
     elif self.clean:
-      code = _Call("./gn clean %s" % path)
+      code = _Call("./../gn clean %s" % path)
       if code != 0: return code
     targets = " ".join(self.targets)
     # The implementation of mksnapshot failure detection relies on

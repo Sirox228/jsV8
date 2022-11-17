@@ -10,6 +10,7 @@ cd v8
 gclient sync
 python gsutil.py config
 ./build/install-build-deps.sh
+cd ../
 
 # stupid way to fix can't find gn
 cp -r depot_tools/* v8/tools/dev

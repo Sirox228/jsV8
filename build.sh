@@ -1,7 +1,5 @@
 echo "compiling for architecture: $1"
 
-cd v8/tools/dev
-
 PWD=$(pwd)
 
 # export PATH="$PATH:$PWD/depot_tools/"
@@ -11,6 +9,8 @@ PWD=$(pwd)
 rm v8/tools/dev/gm.py
 
 cp gm-modded.py v8/tools/dev/gm.py
+
+cd v8/tools/dev
 
 case "$1" in
     armv7-a)

@@ -6,6 +6,11 @@ PWD=$(pwd)
 
 # alias gn=$PWD/depot_tools/gn
 
+cd v8
+gclient sync
+python gsutil.py config
+./build/install-build-deps.sh
+
 # stupid way to fix can't find gn
 cp -r depot_tools/* v8/tools/dev
 rm v8/tools/dev/gm.py

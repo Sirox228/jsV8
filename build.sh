@@ -4,7 +4,7 @@ echo "compiling for architecture: $1"
 
 # alias gn=$PWD/depot_tools/gn
 
-cd v8
+cd depot_tools/v8
 
 # stupid way to fix can't find gn
 # cp -r depot_tools/* v8

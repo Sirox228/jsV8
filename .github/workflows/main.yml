@@ -21,13 +21,14 @@ jobs:
           sudo apt install dos2unix -y
           sudo apt install python -y
           git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+          export PATH="$PATH:$(pwd)"
           sudo chmod -R 777 *
           dos2unix build.sh
           cd depot_tools
-          ./gclient
-          ./fetch v8
+          gclient
+          fetch v8
           cd v8
-          ./../gclient sync
+          gclient sync
           python gsutil.py config
           ./build/install-build-deps.sh
       - name: Build

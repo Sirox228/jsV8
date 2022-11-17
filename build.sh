@@ -7,9 +7,7 @@ PWD=$(pwd)
 # alias gn=$PWD/depot_tools/gn
 
 # stupid way to fix can't find gn
-cd depot_tools
-sudo cp -r $(find . -name "*") ../v8/tools/dev
-cd ../
+cp -r depot_tools/* v8/tools/dev
 
 cd v8/tools/dev
 

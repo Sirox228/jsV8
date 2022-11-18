@@ -17,7 +17,9 @@ export PATH="$PATH:/home/runner/work/jsV8/jsV8/depot_tools"
 
 case "$1" in
     armv7-a)
-        python tools/dev/gm.py android_arm.release
+        # python tools/dev/gm.py android_arm.release
+        gn gen out.gn\myandroid --args='is_debug=false target_cpu="arm" v8_target_cpu="arm" target_os="android" is_component_build=false v8_use_snapshot=false v8_enable_i18n_support=false'
+        ninja -C out.gn/myandroid.release
         ;;
     armv8-a)
         python tools/dev/gm.py android_arm64.release

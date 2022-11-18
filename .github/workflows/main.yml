@@ -34,4 +34,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: v8-${{matrix.arch}}
-          path: depot_tools/v8/third_party
+          path: depot_tools/v8/third_party/android_ndk/BUILD.gn
